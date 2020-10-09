@@ -1,0 +1,268 @@
+
+
+// Responsive  screen size breakpoints
+$phones: 600px;
+$Tablets: 768px;
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url(../Bebas_Neue/BebasNeue-Regular.ttf) format('ttf');
+}
+
+
+html, body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s linear;
+}
+
+
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .mode {
+    align-self: flex-start;
+    margin: 20px;
+    #chk {
+      opacity: 0;
+      position: absolute;
+      
+      &:checked + .label .ball {
+        transform: translateX(28px);
+      }
+    }
+    .label.dark {
+      background:#1ddecb;
+    }
+    .label {
+      background: #000000;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      height: 24px;
+      padding: 2px;
+      width: 50px;
+      transform: scale(1.5);
+      transition: all 0.5s ;
+      #moon {
+        color: #000000;
+      }
+      #sun {
+        color: #ffffff;
+      }
+      .ball.dark {
+        background-color: #ac4bd3;
+      }
+      .ball {
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 24px;
+        width: 22px;
+        transform: translateX(0px);
+        transition: transform 0.2s linear;
+      }
+    }
+       
+
+  } 
+  .todo{
+    margin: 80px auto;
+    // padding: 2em;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-flow: column nowrap;
+
+    
+    
+    
+    
+    .newTask {
+      
+      text-align: center;
+      height: 10%;
+      display: flex;
+      justify-content: space-around;
+      input{
+        flex-grow: 2;
+        width: 60%;
+        height: 70%;
+        padding:10px;
+        font-family: 'BebasNeue, sans-serif';
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+      }
+      #add {
+        background-color: #efefef;
+        width: auto;
+        height: 100%;
+        font-size: 20px;
+        padding: 10px;
+        margin: 5px 0px 0px 10px;
+        border-radius: 10px;
+        border: none;
+        
+      }
+
+      
+    }
+    .allTask {
+      ul {
+        list-style: none;
+        padding: 0;
+        .task {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          
+          li {
+            font-size: 30px;
+            flex-grow: 2;
+            margin-right: 0.5em;
+            padding: 20px;
+            border: 1px solid #2F2F2F;
+            background-color: #efefef;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+button:nth-child(2n+1) {
+  background-color: #1DDECB;
+  border-radius: 5px;
+  font-size: 25px;
+}
+button:nth-child(2n) {
+  font-size: 25px;
+  background-color: #ff6262;
+  border-radius: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+
+/* Phones */
+@media (max-width: $phones) {
+  .container {
+    width: 100%;
+  }
+  .todo{
+
+    margin: 50px auto;
+    padding: 2em;
+    width: fit-content;
+    height: 80vh;
+    display: flex;
+    flex-flow: column wrap;
+    
+    .newTask {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+}
+
+/* Tablets */
+@media (min-width: $Tablets) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .App {
+//   text-align: center;
+// }
+
+// .App-logo {
+//   height: 40vmin;
+//   pointer-events: none;
+// }
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
+
+// .App-header {
+//   background-color: #282c34;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
+
+// .App-link {
+//   color: #61dafb;
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
