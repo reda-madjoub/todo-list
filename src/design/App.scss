@@ -157,6 +157,9 @@ button:nth-child(2n) {
 
 .completed {
   text-decoration: line-through;
+  @if (background-color: #efefef) {
+    background: #1DDECB !important;
+  }
 }
 
 
